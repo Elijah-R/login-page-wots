@@ -1,0 +1,155 @@
+.form-input {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-top: get-vw-1920(10px);
+  padding-bottom: get-vw-1920(14px);
+  padding-left: get-vw-1920(18px);
+  padding-right: get-vw-1920(18px);
+  font-size: get-vw-1920(14px);
+  background-color: $white;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  transition-duration: 0.3s;
+
+  &:hover {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+
+  &:focus-within {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+
+  @include desktopxl {
+    padding-top: get-vw-1440(10px);
+    padding-bottom: get-vw-1440(14px);
+    padding-left: get-vw-1440(18px);
+    padding-right: get-vw-1440(18px);
+    font-size: get-vw-1440(14px);
+  }
+
+  @include tablet {
+    padding-top: get-vw-600(13px);
+    padding-bottom: get-vw-600(11px);
+    padding-left: get-vw-600(18px);
+    padding-right: get-vw-600(18px);
+    font-size: get-vw-600(14px);
+  }
+
+  @include mobile {
+    padding-top: get-vw-320(13px);
+    padding-bottom: get-vw-320(11px);
+    padding-left: get-vw-320(20px);
+    padding-right: get-vw-320(20px);
+    font-size: get-vw-320(14px);
+  }
+}
+
+.form-input input {
+  width: 100%;
+  padding: 0;
+  font-size: inherit;
+  line-height: 1;
+  border: none;
+  outline: none;
+  color: rgba(#000000, 0.4);
+  background-color: inherit;
+  transition-duration: 0.3s;
+
+  &:hover {
+    color: rgba(#000000, 0.6);
+
+    @include tablet {
+      color: $black;
+    }
+  }
+
+  &:active,
+  &:focus {
+    color: $black;
+
+    &::placeholder {
+      color: $black;
+    }
+  }
+}
+
+.form-input--filled input {
+  color: $black;
+}
+
+.form-input__label {
+  position: absolute;
+  top: 50%;
+  left: get-vw-1920(17px);
+  padding-right: get-vw-1920(17px);
+  font-size: inherit;
+  line-height: 1;
+  transition: 0.3s;
+  transform: translateY(-50%);
+  color: rgba(103, 76, 51, 0.4);
+  pointer-events: none;
+
+  @include desktopxl {
+    left: get-vw-1440(18px);
+    padding-right: get-vw-1440(18px);
+    font-size: get-vw-1440(14px);
+  }
+
+  @include tablet {
+    left: get-vw-600(18px);
+    padding-right: get-vw-600(18px);
+    font-size: get-vw-600(14px);
+  }
+
+  @include mobile {
+    left: get-vw-320(20px);
+    padding-right: get-vw-320(20px);
+    font-size: get-vw-320(14px);
+  }
+}
+
+.form-input:hover .form-input__label {
+  color: rgba(103, 76, 51, 0.6);
+}
+
+.form-input--filled input::placeholder {
+  font-size: 0;
+}
+
+.form-input--filled .form-input__label {
+  top: get-vw-1920(-2px);
+  left: get-vw-1920(5px);
+  max-width: get-vw-1920(310px);
+  padding: 0 get-vw-1920(3px);
+  transform: translateY(-50%);
+  font-size: get-vw-1920(8px);
+  line-height: get-line-height(8, 18);
+  color: rgba(103, 76, 51, 0.6);
+  background-color: inherit;
+  pointer-events: none;
+
+  @include desktopxl {
+    top: get-vw-1440(-2px);
+    left: get-vw-1440(5px);
+    max-width: get-vw-1440(310px);
+    padding: 0 get-vw-1440(3px);
+    font-size: get-vw-1440(8px);
+  }
+
+  @include tablet {
+    top: get-vw-600(-2px);
+    left: get-vw-600(5px);
+    max-width: get-vw-600(310px);
+    padding: 0 get-vw-600(3px);
+    font-size: get-vw-600(8px);
+  }
+
+  @include mobile {
+    top: get-vw-320(-2px);
+    left: get-vw-320(5px);
+    max-width: get-vw-320(310px);
+    padding: 0 get-vw-320(3px);
+    font-size: get-vw-320(8px);
+  }
+}

@@ -1,0 +1,11 @@
+mixin form-input(data)
+  label(class='form-input' + (attributes.class ? ' ' + attributes.class : ''))
+    input(
+      id=attributes.id,
+      type=attributes.type,
+      name=attributes.name,
+      pattern=attributes.pattern,
+      autocomplete=attributes.autocomplete,
+      placeholder=attributes.placeholder,
+      required).js-form-input
+    span.form-input__label!= data.label

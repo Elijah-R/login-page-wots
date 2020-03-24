@@ -1,0 +1,47 @@
+include ../blocks/head/head
+//- include ../blocks/header/header
+//- include ../blocks/footer/footer
+//- include ../blocks/svg/svg
+
+//- -
+  const navigation = [
+    {
+      item: ['Партнерская программа', 'partnership-page.html'],
+    },
+    {
+      item: ['Инвесторам', 'deposits-page.html'],
+    },
+    {
+      item: ['Направления', 'directions-page.html'],
+      submenu: [
+        ['Торговля на FOREX', 'directions-page.html#forex'],
+        ['Trading', 'directions-page.html#trading'],
+        ['Crowdfounding', 'directions-page.html#crowdfounding'],
+        ['Торговля', 'directions-page.html#trade'],
+        ['Накопительная программа', 'directions-page.html#partnership'],
+      ],
+    },
+    {
+      item: ['Новости', 'news-page.html'],
+    },
+    {
+      item: ['О компании', 'about-page.html'],
+    },
+    {
+      item: ['FAQ', 'faq-page.html'],
+    },
+    {
+      item: ['Контакты', 'contacts-page.html'],
+    },
+  ]
+
+doctype html
+html(lang='ru')
+  +head('Вход')
+  body
+    //- +header(navigation).header--nosocials
+    main
+      include ../blocks/log-in/log-in
+    //- +footer
+
+    include ../blocks/_scripts-block/_scripts-block

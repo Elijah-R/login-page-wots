@@ -1,0 +1,115 @@
+.form-checkbox {
+  position: relative;
+  margin-top: get-vw-1920(18px);
+
+  @include desktopxl {
+    margin-top: get-vw-1440(22px);
+  }
+
+  @include tablet {
+    margin-top: get-vw-600(17px);
+  }
+
+  @include mobile {
+    margin-top: get-vw-320(17px);
+  }
+}
+
+.form-checkbox input {
+  top: 17px;
+  left: 8px;
+}
+
+.form-checkbox label {
+  position: relative;
+  padding-left: get-vw-1920(22px);
+  font-size: get-vw-1920(14px);
+  line-height: get-line-height(14, 18);
+  cursor: pointer;
+
+  @include desktopxl {
+    padding-left: get-vw-1440(22px);
+    font-size: get-vw-1440(14px);
+  }
+
+  @include tablet {
+    padding-left: get-vw-600(22px);
+    font-size: get-vw-600(14px);
+  }
+
+  @include mobile {
+    padding-left: get-vw-320(22px);
+    font-size: get-vw-320(14px);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: get-vw-1920(2px);
+    top: get-vw-1920(4px);
+    width: get-vw-1920(11px);
+    height: get-vw-1920(11px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition-duration: 0.3s;
+
+    @include desktopxl {
+      left: get-vw-1440(2px);
+      top: get-vw-1440(4px);
+      width: get-vw-1440(11px);
+      height: get-vw-1440(11px);
+    }
+
+    @include tablet {
+      left: get-vw-600(2px);
+      top: get-vw-600(4px);
+      width: get-vw-600(11px);
+      height: get-vw-600(11px);
+    }
+
+    @include mobile {
+      left: get-vw-320(2px);
+      top: get-vw-320(4px);
+      width: get-vw-320(11px);
+      height: get-vw-320(11px);
+    }
+  }
+}
+
+.form-checkbox input:hover + label::before,
+.form-checkbox input:focus + label::before {
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+.form-checkbox input:checked + label::after {
+  content: "";
+  position: absolute;
+  left: get-vw-1920(4px);
+  top: get-vw-1920(6px);
+  width: get-vw-1920(7px);
+  height: get-vw-1920(4px);
+  border-left: 1px solid rgba(0, 0, 0, 0.7);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+  transform: rotate(-45deg);
+  transition-duration: 0.3s;
+
+  @include desktopxl {
+    left: get-vw-1440(4px);
+    top: get-vw-1440(6px);
+    width: get-vw-1440(7px);
+    height: get-vw-1440(4px);
+  }
+
+  @include tablet {
+    left: get-vw-600(4px);
+    top: get-vw-600(6px);
+    width: get-vw-600(7px);
+    height: get-vw-600(4px);
+  }
+
+  @include mobile {
+    left: get-vw-320(4px);
+    top: get-vw-320(6px);
+    width: get-vw-320(7px);
+    height: get-vw-320(4px);
+  }
+}

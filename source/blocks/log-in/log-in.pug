@@ -1,0 +1,44 @@
+include ../form-input/form-input
+include ../form-checkbox/form-checkbox
+include ../button/button
+
+-
+  const links = [
+    {
+      text: 'Восстановить пароль',
+      href: '#'
+    },
+    {
+      text: 'Зарегистрироваться',
+      href: '#'
+    }
+  ]
+
+section.log-in
+  h1.visually-hidden Вход
+  div.log-in__wrapper
+    form(action='#', method='post').log-in__form
+      fieldset
+        legend Вход
+
+        div.log-in__field
+          +form-input({
+            label: 'E-mail',
+          })(type='email')#mail
+
+        div.log-in__field
+          +form-input({
+            label: 'Пароль',
+          })(type='password')#password
+
+        div.log-in__field
+          +form-checkbox({
+            text: 'Запомнить меня',
+            required: false
+          })#remember
+
+        +button('Войти', 'submit').log-in__button
+
+        div.log-in__links
+          each item in links
+            a(href=item.href)!= item.text

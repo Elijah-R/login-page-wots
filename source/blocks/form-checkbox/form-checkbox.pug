@@ -1,0 +1,7 @@
+mixin form-checkbox(data)
+  div.form-checkbox
+    if (data.required)
+      input(class='visually-hidden', type='checkbox', id=attributes.id, required)
+    else
+      input(class='visually-hidden', type='checkbox', id=attributes.id)
+    label(for= attributes.id)= data.text
